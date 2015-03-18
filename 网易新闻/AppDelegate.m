@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "LeftController.h"
+#import "RightController.h"
+#import "MainController.h"
+#import "QHSliderViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -16,8 +21,24 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    //左边
+    LeftController *leftVC=[[LeftController alloc]init];
+    [leftVC.view setFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width*0.75, [UIScreen mainScreen].bounds.size.height)];
+    [QHSliderViewController sharedSliderController].LeftVC=leftVC;
+    //右边
+    RightController *rightVC=[[RightController alloc]init];
+    [rightVC.view setFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
+    [QHSliderViewController sharedSliderController].RightVC=rightVC;
+    //中间
+    MainController *mainVC=[[MainController alloc]init];
+    [QHSliderViewController sharedSliderController].MainVC=mainVC;
+    
+    //导航
+    UINavigationController *naviC = [[UINavigationController alloc] initWithRootViewController:[QHSliderViewController sharedSliderController]];
+    self.window.rootViewController = naviC;
+    [self.window makeKeyAndVisible];
     return YES;
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
