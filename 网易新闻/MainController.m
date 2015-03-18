@@ -14,7 +14,7 @@
 
 @end
 
-@implementation MainController 
+@implementation MainController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
