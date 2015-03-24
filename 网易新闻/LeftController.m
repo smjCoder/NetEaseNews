@@ -10,13 +10,16 @@
 
 #import "MainController.h"
 #import "SliderViewController/QHSliderViewController.h"
+#import "WelcomeView.h"
+#import "ZFModalTransitionAnimator.h"
+#import "SubjectView.h"
 
 @interface LeftController ()
 {
     NSArray *arry;
     NSMutableArray *btnviewAry;
 }
-
+@property (nonatomic, strong) ZFModalTransitionAnimator *animator;
 @end
 
 @implementation LeftController
@@ -52,12 +55,10 @@
         
     }
     
-    
-    
 }
 -(void)clickbtn:(UIButton *)sender
 {
-    for (LeftView *obj in [self.view subviews]) {
+    for (LeftView *obj in btnviewAry) {
         if (sender.tag+100==obj.tag)
         {
             NSBundle *bund=[NSBundle bundleWithPath:[[NSBundle mainBundle]pathForResource:[arry[obj.tag-200] objectForKey:@"imgname"] ofType:@"bundle" ]];
@@ -72,7 +73,7 @@
             [self imgAanimation:(int)sender.tag-100 andimgAry:imgAry];
             MainController *controllerM=(MainController *)[[QHSliderViewController sharedSliderController] MainVC];
             [controllerM.nav_btn setTitle:[arry[obj.tag-200] objectForKey:@"title"] forState:UIControlStateNormal ];
-//            [[QHSliderViewController sharedSliderController] closeSideBar];
+            [[QHSliderViewController sharedSliderController] closeSideBar];
             NSUserDefaults *defa=[NSUserDefaults standardUserDefaults];
             [defa setObject:@(obj.tag-200) forKey:@"viewtag"];
             [defa synchronize];
@@ -206,6 +207,27 @@
             }];
         }];
     }];
+
+}
+- (IBAction)gowelcomview:(UIButton *)sender {
+    
+    
+    WelcomeView *welcome=[WelcomeView new];
+    welcome.view.frame=self.view.window.bounds;
+    welcome.modalPresentationStyle=UIModalPresentationCustom;
+    self.animator = [[ZFModalTransitionAnimator alloc] initWithModalViewController:welcome];
+    self.animator.dragable = YES;
+    self.animator.bounces = NO;
+    self.animator.behindViewAlpha = 0.5f;
+    self.animator.behindViewScale = 1.0f;
+    self.animator.transitionDuration = 0.7f;
+    self.animator.direction = ZFModalTransitonDirectionLeft;
+    welcome.transitioningDelegate = self.animator;
+    [self presentViewController:welcome animated:YES completion:nil];
+}
+- (IBAction)gosubjectview:(UIButton *)sender {
+    SubjectView *subject=[SubjectView new];
+    [self.navigationController pushViewController:subject animated:YES];
 
 }
 @end

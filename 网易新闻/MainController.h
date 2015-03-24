@@ -11,4 +11,5 @@
 @interface MainController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *nav_btn;
 +(id)init:(NSString *)str;
+@property (weak, nonatomic) IBOutlet UIButton *nickimg;
 @end

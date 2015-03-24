@@ -22,4 +22,5 @@
 
     return [[NSBundle mainBundle]loadNibNamed:@"leftView" owner:nil options:nil][0];
 }
+
 @end

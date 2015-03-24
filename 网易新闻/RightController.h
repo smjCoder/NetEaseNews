@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface RightController : UIViewController
+@property (weak, nonatomic) IBOutlet UIView *themeVieB;
+@property (weak, nonatomic) IBOutlet UIButton *enterBtn;
+@property (weak, nonatomic) IBOutlet UILabel *enterName;
+@property (weak, nonatomic) IBOutlet UIView *adview;
+@property (weak, nonatomic) IBOutlet UIImageView *nickimg;
 
 @end

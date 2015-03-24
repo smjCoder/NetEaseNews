@@ -9,7 +9,7 @@
 #import "MainController.h"
 #import "SliderViewController/QHSliderViewController.h"
 #import "LeftController.h"
-
+#import "UIButton+WebCache.h"
 @interface MainController ()
 
 @end
@@ -18,7 +18,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+     NSUserDefaults *defa=[NSUserDefaults standardUserDefaults];
+    [defa setObject:@(0) forKey:@"viewtag"];
+    [defa setObject:@(0) forKey:@"theme"];
+    [defa synchronize];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(entername) name:@"shabi" object:nil];
 
 
 }
@@ -61,5 +65,18 @@
     [controller.nav_btn setTitle:str forState:UIControlStateNormal];
     return self;
 }
+-(void)entername
+{
+    NSUserDefaults *defa=[NSUserDefaults standardUserDefaults];
+    [_nickimg sd_setBackgroundImageWithURL:[NSURL URLWithString:[defa objectForKey:@"profileImage"]] forState:UIControlStateNormal];
+    _nickimg.layer.cornerRadius=15;
+    _nickimg.layer.masksToBounds=YES;
+    
+}
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:@"shabi"];
+}
+
 
 @end

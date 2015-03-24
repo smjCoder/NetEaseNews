@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>themetitle</key>
+		<string>高级黑（默认）</string>
+		<key>themename</key>
+		<string>DefaultTheme</string>
+	</dict>
+	<dict>
+		<key>themetitle</key>
+		<string>态度红</string>
+		<key>themename</key>
+		<string>AttitudeRed</string>
+	</dict>
+	<dict>
+		<key>themetitle</key>
+		<string>4.0特别版</string>
+		<key>themename</key>
+		<string>4_0_Special</string>
+	</dict>
+	<dict>
+		<key>themetitle</key>
+		<string>春节版</string>
+		<key>themename</key>
+		<string>SpringFestival</string>
+	</dict>
+</array>
+</plist>

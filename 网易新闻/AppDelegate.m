@@ -11,6 +11,9 @@
 #import "RightController.h"
 #import "MainController.h"
 #import "QHSliderViewController.h"
+#import "ShareSDK/ShareSDK.h"
+#import "WeiboApi.h"
+#import "WeiboSDK.h"
 
 
 @interface AppDelegate ()
@@ -33,13 +36,39 @@
     MainController *mainVC=[[MainController alloc]init];
     [QHSliderViewController sharedSliderController].MainVC=mainVC;
     
+    [ShareSDK registerApp:@"3df7a36158b2"];
+    [ShareSDK connectSinaWeiboWithAppKey:@"568898243" appSecret:@"38a4f8204cc784f81f9f0daaf31e02e3" redirectUri:@"http://www.sharesdk.cn" weiboSDKCls:nil];
+    
     //导航
     UINavigationController *naviC = [[UINavigationController alloc] initWithRootViewController:[QHSliderViewController sharedSliderController]];
     self.window.rootViewController = naviC;
     [self.window makeKeyAndVisible];
+    
+    
+    
     return YES;
     
+    
+    
 }
+- (BOOL)application:(UIApplication *)application
+      handleOpenURL:(NSURL *)url
+{
+    return [ShareSDK handleOpenURL:url
+                        wxDelegate:self];
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation
+{
+    return [ShareSDK handleOpenURL:url
+                 sourceApplication:sourceApplication
+                        annotation:annotation
+                        wxDelegate:self];
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
