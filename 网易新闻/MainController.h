@@ -12,4 +12,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *nav_btn;
 +(id)init:(NSString *)str;
 @property (weak, nonatomic) IBOutlet UIButton *nickimg;
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollview;
+
+
 @end

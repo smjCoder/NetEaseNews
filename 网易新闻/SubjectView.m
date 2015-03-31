@@ -32,14 +32,18 @@ static CGFloat min_distance = 100;
     _tableTheme.dataSource=self;
     arry=@[@"theme_default",@"theme_attitude",@"theme_4.0",@"theme_springFestival"];
     name=@[@"高级黑（默认）",@"态度红",@"4.0特别版",@"春节版"];
+    NSUserDefaults *defa=[NSUserDefaults standardUserDefaults];
+    if ([defa objectForKey:@"theme"]==nil) {
+        [defa setObject:@(0) forKey:@"theme"];
+        [defa setObject:[defa objectForKey:@"theme"] forKey:@"change"];
+        [defa synchronize];
+    }
     UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(paningGestureReceive:)];
     [recognizer delaysTouchesBegan];
     [self.view addGestureRecognizer:recognizer];
-    NSUserDefaults *defa=[NSUserDefaults standardUserDefaults];
-    [defa setObject:[defa objectForKey:@"theme"] forKey:@"change"];
-    [defa synchronize];
     
     
+       
     
 
 }
@@ -67,15 +71,21 @@ static CGFloat min_distance = 100;
         if (cell==nil) {
             cell=[ThemeUse themeuse];
         }
+        NSUserDefaults *defa=[NSUserDefaults standardUserDefaults];
+        if (indexPath.row==[[defa objectForKey:@"theme"] intValue]) {
+            cell.useBtn.selected = YES;
+            [cell.useBtn setBackgroundImage:nil forState:UIControlStateSelected];
+        }
+        else{
+            cell.useBtn.selected = NO;
+            [cell.useBtn setBackgroundImage:[UIImage imageNamed:@"theme_setting_normal.png"] forState:UIControlStateNormal];
+        }
         NSBundle *bund=[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:arry[indexPath.row] ofType:@"bundle"]];
         NSString *str=[bund pathForResource:@"thumb@2x" ofType:@"png"];
         cell.useImg.image=[UIImage imageWithContentsOfFile:str];
         cell.useLab.text=name[indexPath.row];
         cell.selectionStyle=UITableViewCellSelectionStyleNone;
         [cell.useBtn addTarget:self action:@selector(beUsed:) forControlEvents:UIControlEventTouchUpInside];
-//        [cell.useBtn setImage:[UIImage imageNamed:@"theme_setting_normal@2x.png"] forState:UIControlStateNormal];
-//        [cell.useBtn setTitle:@"使用中" forState:UIControlStateSelected];
-//        [cell.useBtn setTitle:@"使用" forState:UIControlStateNormal];
         cell.useBtn.tag=20+indexPath.row;
        
         return cell;
@@ -119,10 +129,10 @@ static CGFloat min_distance = 100;
 }
 -(void)beUsed:(UIButton *)sender
 {
-    
-        NSUserDefaults *defa=[NSUserDefaults standardUserDefaults];
-        [defa setObject:@(sender.tag-20) forKey:@"theme"];
-        [defa synchronize];
+    NSUserDefaults *defa=[NSUserDefaults standardUserDefaults];
+    [defa setObject:@(sender.tag-20) forKey:@"theme"];
+    [defa synchronize];
+    [_tableTheme reloadData];
     
     
 }

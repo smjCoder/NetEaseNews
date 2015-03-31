@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="nav_btn" destination="bLw-r6-lB2" id="NfD-HO-t6G"/>
                 <outlet property="nickimg" destination="C3v-qa-uZK" id="B3t-yv-SdQ"/>
+                <outlet property="scrollview" destination="GQw-3i-8x6" id="2hA-Ts-u4x"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -128,16 +129,16 @@
                         </mask>
                         <mask key="constraints">
                             <exclude reference="RGI-PM-Haf"/>
+                            <exclude reference="5s6-8e-exy"/>
+                            <exclude reference="i0v-Ko-Q9z"/>
+                            <exclude reference="qel-bt-nOi"/>
+                            <exclude reference="tDI-OD-omg"/>
+                            <exclude reference="iXD-mS-CDl"/>
+                            <exclude reference="nCt-Qh-E4R"/>
                             <exclude reference="U3f-Ln-yuv"/>
                             <exclude reference="b1h-yK-nBi"/>
                             <exclude reference="gXC-mr-rbs"/>
                             <exclude reference="xra-yf-15a"/>
-                            <exclude reference="iXD-mS-CDl"/>
-                            <exclude reference="nCt-Qh-E4R"/>
-                            <exclude reference="qel-bt-nOi"/>
-                            <exclude reference="tDI-OD-omg"/>
-                            <exclude reference="5s6-8e-exy"/>
-                            <exclude reference="i0v-Ko-Q9z"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
@@ -149,32 +150,73 @@
                         </mask>
                         <mask key="constraints">
                             <include reference="RGI-PM-Haf"/>
+                            <include reference="5s6-8e-exy"/>
+                            <include reference="i0v-Ko-Q9z"/>
+                            <include reference="qel-bt-nOi"/>
+                            <include reference="tDI-OD-omg"/>
+                            <include reference="iXD-mS-CDl"/>
+                            <include reference="nCt-Qh-E4R"/>
                             <include reference="U3f-Ln-yuv"/>
                             <include reference="b1h-yK-nBi"/>
                             <include reference="gXC-mr-rbs"/>
                             <include reference="xra-yf-15a"/>
-                            <include reference="iXD-mS-CDl"/>
-                            <include reference="nCt-Qh-E4R"/>
-                            <include reference="qel-bt-nOi"/>
-                            <include reference="tDI-OD-omg"/>
-                            <include reference="5s6-8e-exy"/>
-                            <include reference="i0v-Ko-Q9z"/>
                         </mask>
                     </variation>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nc7-4q-zYV">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" white="0.94999999999999996" alpha="0.94999999999999996" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="7cb-8j-Lpr"/>
+                        <constraint firstAttribute="width" constant="40" id="MYN-OA-VHN"/>
+                    </constraints>
+                    <state key="normal" image="channel_nav_arrow.png">
+                        <color key="titleColor" white="0.95000000000000007" alpha="0.95000000000000007" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="7cb-8j-Lpr"/>
+                            <exclude reference="MYN-OA-VHN"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="7cb-8j-Lpr"/>
+                            <include reference="MYN-OA-VHN"/>
+                        </mask>
+                    </variation>
+                </button>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQw-3i-8x6">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                </scrollView>
             </subviews>
-            <color key="backgroundColor" red="0.35383880229999998" green="1" blue="0.3445170333" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="GQw-3i-8x6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="D3b-Ah-IQ6"/>
+                <constraint firstAttribute="trailing" secondItem="Nc7-4q-zYV" secondAttribute="trailing" id="Ej6-Pb-ZFs"/>
                 <constraint firstItem="vOz-lJ-cRf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="H01-7R-ORt"/>
                 <constraint firstAttribute="trailing" secondItem="vOz-lJ-cRf" secondAttribute="trailing" id="ed6-0c-FyS"/>
                 <constraint firstItem="vOz-lJ-cRf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ghc-zW-RcW"/>
+                <constraint firstItem="GQw-3i-8x6" firstAttribute="top" secondItem="Nc7-4q-zYV" secondAttribute="bottom" id="kSf-u7-GAK"/>
+                <constraint firstAttribute="bottom" secondItem="GQw-3i-8x6" secondAttribute="bottom" id="oir-ql-8MF"/>
+                <constraint firstAttribute="trailing" secondItem="GQw-3i-8x6" secondAttribute="trailing" id="r2d-aB-UDw"/>
+                <constraint firstItem="Nc7-4q-zYV" firstAttribute="top" secondItem="vOz-lJ-cRf" secondAttribute="bottom" id="vSE-nU-X7t"/>
             </constraints>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="vOz-lJ-cRf"/>
+                    <exclude reference="Nc7-4q-zYV"/>
+                    <exclude reference="GQw-3i-8x6"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="Ej6-Pb-ZFs"/>
+                    <exclude reference="vSE-nU-X7t"/>
+                    <exclude reference="D3b-Ah-IQ6"/>
+                    <exclude reference="kSf-u7-GAK"/>
+                    <exclude reference="oir-ql-8MF"/>
+                    <exclude reference="r2d-aB-UDw"/>
                     <exclude reference="H01-7R-ORt"/>
                     <exclude reference="ed6-0c-FyS"/>
                     <exclude reference="ghc-zW-RcW"/>
@@ -183,17 +225,26 @@
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
                     <include reference="vOz-lJ-cRf"/>
+                    <include reference="Nc7-4q-zYV"/>
+                    <include reference="GQw-3i-8x6"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="Ej6-Pb-ZFs"/>
+                    <include reference="vSE-nU-X7t"/>
+                    <include reference="D3b-Ah-IQ6"/>
+                    <include reference="kSf-u7-GAK"/>
+                    <include reference="oir-ql-8MF"/>
+                    <include reference="r2d-aB-UDw"/>
                     <include reference="H01-7R-ORt"/>
                     <include reference="ed6-0c-FyS"/>
                     <include reference="ghc-zW-RcW"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="98" y="-374"/>
+            <point key="canvasLocation" x="-53" y="-384"/>
         </view>
     </objects>
     <resources>
+        <image name="channel_nav_arrow.png" width="14" height="8"/>
         <image name="top_navigation_background.png" width="320" height="64"/>
         <image name="top_navigation_infoicon" width="16" height="16"/>
         <image name="top_navigation_menuicon" width="16" height="16"/>

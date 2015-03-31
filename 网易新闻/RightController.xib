@@ -21,18 +21,58 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iMf-Q6-fy5">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8a-1T-P4C">
+                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <color key="backgroundColor" red="0.90860648779999997" green="0.054106972910000002" blue="0.018865109639999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="jy0-FW-sRb"/>
+                                <constraint firstAttribute="width" constant="35" id="pNg-mU-nmQ"/>
+                            </constraints>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="jy0-FW-sRb"/>
+                                    <exclude reference="pNg-mU-nmQ"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="jy0-FW-sRb"/>
+                                    <include reference="pNg-mU-nmQ"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <action selector="pushtempview:" destination="-1" eventType="touchUpInside" id="xrq-mh-hQv"/>
+                            </connections>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" red="0.48527020520000003" green="0.83245781240000005" blue="0.87771739130000004" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
+                        <constraint firstItem="e8a-1T-P4C" firstAttribute="top" secondItem="iMf-Q6-fy5" secondAttribute="top" constant="16" id="4ip-8z-Th6"/>
                         <constraint firstAttribute="height" constant="85" id="6Xd-4i-cxz"/>
+                        <constraint firstItem="e8a-1T-P4C" firstAttribute="leading" secondItem="iMf-Q6-fy5" secondAttribute="leading" constant="29" id="bbJ-DT-BUG"/>
                     </constraints>
                     <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="e8a-1T-P4C"/>
+                        </mask>
                         <mask key="constraints">
                             <exclude reference="6Xd-4i-cxz"/>
+                            <exclude reference="4ip-8z-Th6"/>
+                            <exclude reference="bbJ-DT-BUG"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="subviews">
+                            <include reference="e8a-1T-P4C"/>
+                        </mask>
                         <mask key="constraints">
                             <include reference="6Xd-4i-cxz"/>
+                            <include reference="4ip-8z-Th6"/>
+                            <include reference="bbJ-DT-BUG"/>
                         </mask>
                     </variation>
                 </view>
@@ -302,6 +342,9 @@
                                     <include reference="ij3-Pe-3Im"/>
                                 </mask>
                             </variation>
+                            <connections>
+                                <action selector="readRecord:" destination="-1" eventType="touchUpInside" id="8NN-oW-b04"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3OO-fY-OKx">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -570,7 +613,7 @@
                     <include reference="gX0-Vf-Lay"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="471" y="140"/>
+            <point key="canvasLocation" x="518" y="128"/>
         </view>
     </objects>
     <resources>

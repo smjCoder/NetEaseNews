@@ -110,7 +110,7 @@
         </view>
     </objects>
     <resources>
-        <image name="LaunchImage" width="320" height="64"/>
+        <image name="LaunchImage" width="40" height="40"/>
         <image name="icon_share.png" width="30" height="30"/>
     </resources>
 </document>

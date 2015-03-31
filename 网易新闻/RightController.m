@@ -11,7 +11,8 @@
 #import "EnterView.h"
 #import "UIImageView+WebCache.h"
 #import "QHSliderViewController.h"
-
+#import "ReadRecordview.h"
+#import "TempView.h"
 
 @interface RightController ()
 
@@ -71,6 +72,16 @@
     [[QHSliderViewController sharedSliderController]closeSideBar];
 }
 - (IBAction)setting:(UIButton *)sender {
+    
+}
+- (IBAction)readRecord:(UIButton *)sender {
+    ReadRecordview *view=[ReadRecordview new];
+    [self.navigationController pushViewController:view animated:YES];
+    
+}
+- (IBAction)pushtempview:(id)sender {
+    TempView *view=[TempView new];
+    [self.navigationController pushViewController:view animated:YES];
     
 }
 

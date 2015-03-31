@@ -129,19 +129,19 @@
                     <exclude reference="Enh-mz-9Ox"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="35J-L4-l66"/>
+                    <exclude reference="U0U-tO-o8w"/>
                     <exclude reference="0y7-9m-XfU"/>
                     <exclude reference="iSe-rX-qB4"/>
                     <exclude reference="ksu-7b-gaF"/>
                     <exclude reference="zzY-Bq-c8x"/>
                     <exclude reference="X7U-4n-BPQ"/>
                     <exclude reference="g8p-pb-fTh"/>
-                    <exclude reference="qZZ-Ca-Fsa"/>
-                    <exclude reference="y2a-tn-kfZ"/>
-                    <exclude reference="35J-L4-l66"/>
-                    <exclude reference="U0U-tO-o8w"/>
                     <exclude reference="AWd-S1-ue2"/>
                     <exclude reference="VP2-Qw-vtJ"/>
                     <exclude reference="bA9-cD-h2y"/>
+                    <exclude reference="qZZ-Ca-Fsa"/>
+                    <exclude reference="y2a-tn-kfZ"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -153,19 +153,19 @@
                     <include reference="Enh-mz-9Ox"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="35J-L4-l66"/>
+                    <include reference="U0U-tO-o8w"/>
                     <include reference="0y7-9m-XfU"/>
                     <include reference="iSe-rX-qB4"/>
                     <include reference="ksu-7b-gaF"/>
                     <include reference="zzY-Bq-c8x"/>
                     <include reference="X7U-4n-BPQ"/>
                     <include reference="g8p-pb-fTh"/>
-                    <include reference="qZZ-Ca-Fsa"/>
-                    <include reference="y2a-tn-kfZ"/>
-                    <include reference="35J-L4-l66"/>
-                    <include reference="U0U-tO-o8w"/>
                     <include reference="AWd-S1-ue2"/>
                     <include reference="VP2-Qw-vtJ"/>
                     <include reference="bA9-cD-h2y"/>
+                    <include reference="qZZ-Ca-Fsa"/>
+                    <include reference="y2a-tn-kfZ"/>
                 </mask>
             </variation>
             <connections>
