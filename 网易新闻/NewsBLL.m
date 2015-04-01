@@ -19,5 +19,9 @@
      NewsDAL *dal=[NewsDAL new];
     [dal getTopNewsWithuccess:success fail:fail];
 }
-
+-(void)getNewsDetailWithUrl:(NSString *)url success:(void(^)(id htmlData))success fail:(void (^)())fail
+{
+    NewsDAL *dal=[NewsDAL new];
+    [dal getNewsDetailWithUrl:url success:success fail:fail];
+}
 @end

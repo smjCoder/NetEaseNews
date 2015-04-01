@@ -326,7 +326,7 @@
 {
     if (indexPath.row!=0) {
         News *mondel=tablesource[indexPath.row-1];
-        DetailView  *detailview=[DetailView new];
+        DetailView  *detailview=[DetailView sharedManager];
         detailview.htmlurl=mondel.url;
         [[QHSliderViewController sharedSliderController].navigationController pushViewController:detailview animated:YES];
     }

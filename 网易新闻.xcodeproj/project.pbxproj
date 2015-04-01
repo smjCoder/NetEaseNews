@@ -215,6 +215,11 @@
 		D7ED87F01ACA3567004EB748 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D7ED87EF1ACA3567004EB748 /* libxml2.2.dylib */; };
 		D7ED87F61ACA381F004EB748 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ED87F31ACA381F004EB748 /* HTMLNode.m */; };
 		D7ED87F71ACA381F004EB748 /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ED87F51ACA381F004EB748 /* HTMLParser.m */; };
+		D7ED87FF1ACA7B9F004EB748 /* FDFontPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ED87FA1ACA7B9F004EB748 /* FDFontPickerViewController.m */; };
+		D7ED88001ACA7B9F004EB748 /* FDLabelConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ED87FC1ACA7B9F004EB748 /* FDLabelConfigViewController.m */; };
+		D7ED88011ACA7B9F004EB748 /* FDLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ED87FE1ACA7B9F004EB748 /* FDLabelView.m */; };
+		D7ED88061ACA9119004EB748 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ED88031ACA9119004EB748 /* MBProgressHUD.m */; };
+		D7ED88071ACA9119004EB748 /* MBProgressHUD+JUHua.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ED88051ACA9119004EB748 /* MBProgressHUD+JUHua.m */; };
 		D7EF66531AC2583A0091C4D0 /* LocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EF66511AC2583A0091C4D0 /* LocationView.m */; };
 		D7EF66541AC2583A0091C4D0 /* LocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7EF66521AC2583A0091C4D0 /* LocationView.xib */; };
 		D7EF66581AC25A1A0091C4D0 /* TempView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EF66561AC25A1A0091C4D0 /* TempView.m */; };
@@ -582,6 +587,16 @@
 		D7ED87F31ACA381F004EB748 /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
 		D7ED87F41ACA381F004EB748 /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
 		D7ED87F51ACA381F004EB748 /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLParser.m; sourceTree = "<group>"; };
+		D7ED87F91ACA7B9F004EB748 /* FDFontPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDFontPickerViewController.h; sourceTree = "<group>"; };
+		D7ED87FA1ACA7B9F004EB748 /* FDFontPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDFontPickerViewController.m; sourceTree = "<group>"; };
+		D7ED87FB1ACA7B9F004EB748 /* FDLabelConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDLabelConfigViewController.h; sourceTree = "<group>"; };
+		D7ED87FC1ACA7B9F004EB748 /* FDLabelConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDLabelConfigViewController.m; sourceTree = "<group>"; };
+		D7ED87FD1ACA7B9F004EB748 /* FDLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDLabelView.h; sourceTree = "<group>"; };
+		D7ED87FE1ACA7B9F004EB748 /* FDLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDLabelView.m; sourceTree = "<group>"; };
+		D7ED88021ACA9119004EB748 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		D7ED88031ACA9119004EB748 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		D7ED88041ACA9119004EB748 /* MBProgressHUD+JUHua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+JUHua.h"; sourceTree = "<group>"; };
+		D7ED88051ACA9119004EB748 /* MBProgressHUD+JUHua.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+JUHua.m"; sourceTree = "<group>"; };
 		D7EF66501AC2583A0091C4D0 /* LocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationView.h; sourceTree = "<group>"; };
 		D7EF66511AC2583A0091C4D0 /* LocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationView.m; sourceTree = "<group>"; };
 		D7EF66521AC2583A0091C4D0 /* LocationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationView.xib; sourceTree = "<group>"; };
@@ -1267,6 +1282,19 @@
 			path = HTMLParser;
 			sourceTree = "<group>";
 		};
+		D7ED87F81ACA7B9F004EB748 /* FDLabelView */ = {
+			isa = PBXGroup;
+			children = (
+				D7ED87F91ACA7B9F004EB748 /* FDFontPickerViewController.h */,
+				D7ED87FA1ACA7B9F004EB748 /* FDFontPickerViewController.m */,
+				D7ED87FB1ACA7B9F004EB748 /* FDLabelConfigViewController.h */,
+				D7ED87FC1ACA7B9F004EB748 /* FDLabelConfigViewController.m */,
+				D7ED87FD1ACA7B9F004EB748 /* FDLabelView.h */,
+				D7ED87FE1ACA7B9F004EB748 /* FDLabelView.m */,
+			);
+			path = FDLabelView;
+			sourceTree = "<group>";
+		};
 		D7EF66621AC264A50091C4D0 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -1446,6 +1474,11 @@
 		D7F8498B1AB6D0D000562615 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				D7ED88021ACA9119004EB748 /* MBProgressHUD.h */,
+				D7ED88031ACA9119004EB748 /* MBProgressHUD.m */,
+				D7ED88041ACA9119004EB748 /* MBProgressHUD+JUHua.h */,
+				D7ED88051ACA9119004EB748 /* MBProgressHUD+JUHua.m */,
+				D7ED87F81ACA7B9F004EB748 /* FDLabelView */,
 				D7ED87F11ACA381F004EB748 /* HTMLParser */,
 				D7E7261F1AC6A40A00CDB99A /* WHScrollAndPageView.h */,
 				D7E726201AC6A40A00CDB99A /* WHScrollAndPageView.m */,
@@ -1881,6 +1914,7 @@
 				D7FD73C31AC0F1A4006236A6 /* JTCalendar.m in Sources */,
 				D7A03D181ABAED8E000ADE41 /* SendView.m in Sources */,
 				D7F8494C1AB6A20B00562615 /* ViewController.m in Sources */,
+				D7ED87FF1ACA7B9F004EB748 /* FDFontPickerViewController.m in Sources */,
 				D78F0E771AC53C3B00BD8903 /* HTHorizontalSelectionListLabelCell.m in Sources */,
 				D7E83D551AB95E6C00A2B1E7 /* SDWebImageManager.m in Sources */,
 				D7F849B51AB6DBC900562615 /* QHCommonUtil.m in Sources */,
@@ -1898,6 +1932,7 @@
 				D7EF66791AC264A50091C4D0 /* AFNetworkReachabilityManager.m in Sources */,
 				D78F0E761AC53C3B00BD8903 /* HTHorizontalSelectionListCustomViewCell.m in Sources */,
 				D7E83D6E1AB9A14F00A2B1E7 /* WelcomeView.m in Sources */,
+				D7ED88011ACA7B9F004EB748 /* FDLabelView.m in Sources */,
 				D7E726101AC6330F00CDB99A /* NewsBLL.m in Sources */,
 				D7FD73C81AC0F1A4006236A6 /* JTCalendarMenuView.m in Sources */,
 				D7F849B11AB6DAE500562615 /* MLTransitionAnimation.m in Sources */,
@@ -1911,9 +1946,11 @@
 				D7EF66821AC266C50091C4D0 /* AFnetworkingHelper.m in Sources */,
 				D7E7E9B61AC0417D00B3B5C5 /* ReleaseView.m in Sources */,
 				D7EF66891AC28D6B0091C4D0 /* ChineseString.m in Sources */,
+				D7ED88071ACA9119004EB748 /* MBProgressHUD+JUHua.m in Sources */,
 				D78F0E8E1AC550D300BD8903 /* EGORefreshTableHeaderView.m in Sources */,
 				D7E83D581AB95E6C00A2B1E7 /* UIImage+GIF.m in Sources */,
 				D7FD73C61AC0F1A4006236A6 /* JTCalendarDayView.m in Sources */,
+				D7ED88061ACA9119004EB748 /* MBProgressHUD.m in Sources */,
 				D7EF667C1AC264A50091C4D0 /* AFURLRequestSerialization.m in Sources */,
 				D7FD73C91AC0F1A4006236A6 /* JTCalendarMonthView.m in Sources */,
 				D78F0E901AC550D300BD8903 /* MessageInterceptor.m in Sources */,
@@ -1941,6 +1978,7 @@
 				D78F0EA21AC5549300BD8903 /* PhotoNewsCell.m in Sources */,
 				D7E5FDC11AB7B4A300A8CBAB /* LeftView.m in Sources */,
 				D7A03D131ABAAAEC000ADE41 /* SharIcon.m in Sources */,
+				D7ED88001ACA7B9F004EB748 /* FDLabelConfigViewController.m in Sources */,
 				D7E83D541AB95E6C00A2B1E7 /* SDWebImageDownloaderOperation.m in Sources */,
 				D7EF66771AC264A50091C4D0 /* AFHTTPRequestOperationManager.m in Sources */,
 				D7FD73CB1AC0F1A4006236A6 /* JTCalendarWeekView.m in Sources */,

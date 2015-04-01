@@ -12,4 +12,5 @@
 @interface NewsDAL :AFnetworkingHelper
 -(void)getNewsWithpageindex:(NSString *)pageindex success:(void (^)(id json))success fail:(void (^)())fail;
 -(void)getTopNewsWithuccess:(void (^)(id json))success fail:(void (^)())fail;
+-(void)getNewsDetailWithUrl:(NSString *)url success:(void(^)(id htmlData))success fail:(void (^)())fail;
 @end

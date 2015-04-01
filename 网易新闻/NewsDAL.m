@@ -21,6 +21,10 @@
     NSString *strurl=[NSString stringWithFormat:@"%@",TOP_URL];
     [super getJsonWith:strurl andSuccess:success andFail:fail];
 }
-
+-(void)getNewsDetailWithUrl:(NSString *)url success:(void(^)(id htmlData))success fail:(void (^)())fail
+{
+    NSString *strurl=[NSString stringWithString:url];
+    [super getJsonWith:strurl andSuccess:success andFail:fail];
+}
 
 @end

@@ -10,4 +10,5 @@
 
 @interface DetailView : UIViewController
 @property (nonatomic,copy) NSString *htmlurl;
++(DetailView *)sharedManager;
 @end
